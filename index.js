@@ -7,8 +7,10 @@ const path = require('path');
 class PackageExternal {
   constructor(serverless, options) {
     this.serverless = serverless;
-    const enabled = this.serverless.service.custom && this.serverless.service.custom.packageExternal && this.serverless.service.custom.packageExternal.enabled;
-    if (enabled === true) {
+    const enabled = this.serverless.service.custom &&
+                    this.serverless.service.custom.packageExternal &&
+                    this.serverless.service.custom.packageExternal.enabled === false;
+    if (enabled === false) {
       return;
     }
     this.options = Object.assign({
