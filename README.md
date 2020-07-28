@@ -29,6 +29,7 @@ functions:
 
 custom:
   packageExternal:
+    enabled: true # optional, default true
     external:
       - '../common'
       - '../service-a/module'
